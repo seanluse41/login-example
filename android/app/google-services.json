@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "655459677520",
+    "firebase_url": "https://flash-chat-coursework.firebaseio.com",
+    "project_id": "flash-chat-coursework",
+    "storage_bucket": "flash-chat-coursework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655459677520:android:8184433cdb4e330e546855",
+        "android_client_info": {
+          "package_name": "co.seanluse.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655459677520-39p9bgbn6akd3hevk30e6l6jkkm9dioe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3BXmi001g4fg2rEHHcQTQZbp16lHMmpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655459677520-39p9bgbn6akd3hevk30e6l6jkkm9dioe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
