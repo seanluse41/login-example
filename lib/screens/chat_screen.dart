@@ -126,7 +126,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
 class MessageBubble extends StatelessWidget {
 
-  MessageBubble({this.sender, this.text})
+  MessageBubble({this.sender, this.text});
 
   final String sender;
   final String text;
