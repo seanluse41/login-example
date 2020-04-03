@@ -73,12 +73,14 @@ class _ChatScreenState extends State<ChatScreen> {
                   );
                 }
                 final messages = snapshot.data.documents;
-                List<Text> messageWidgets = [];
+                List<MessageBubble> messageWidgets = [];
                 for (var message in messages) {
                   final messageText = message.data['text'];
                   final messageSender = message.data['sender'];
 
-                  final messageWidget = messageWidgets.add(messageWidget);
+                  final messageWidget =
+                      MessageBubble(sender: messageSender, text: messageText);
+                  messageWidgets.add(messageWidget);
                 }
                 return Expanded(
                   child: ListView(
@@ -125,7 +127,6 @@ class _ChatScreenState extends State<ChatScreen> {
 }
 
 class MessageBubble extends StatelessWidget {
-
   MessageBubble({this.sender, this.text});
 
   final String sender;
@@ -133,7 +134,7 @@ class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '$messageText from $messageSender',
+      '$sender from $text',
       style: TextStyle(
         fontSize: 20.0,
       ),
