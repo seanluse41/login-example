@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 import '../constants.dart';
-import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
@@ -34,7 +33,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 tag: 'logo',
                 child: Container(
                   height: 200.0,
-                  child: Image.asset('images/logo.png'),
+                  child: Image.asset('assets/images/logo.png'),
                 ),
               ),
               SizedBox(
@@ -82,7 +81,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       setState(() {
                         showSpinner = false;
                       });
-                      Navigator.pushNamed(context, ChatScreen.id);
                     }
                   } catch (e) {
                     print(e);

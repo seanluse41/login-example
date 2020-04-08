@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
@@ -14,7 +15,6 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   AnimationController controller;
-
   @override
   void initState() {
     super.initState();
@@ -30,51 +30,60 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[400],
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Row(
+      backgroundColor: Colors.blue[400],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Row(
               children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/logo.png'),
-                    height: 60.0,
-                  ),
+                SizedBox(
+                  height: 300.0,
                 ),
-                TypewriterAnimatedTextKit(
+                TyperAnimatedTextKit(
                   text: ['Noruuu'],
                   textStyle: TextStyle(
-                    fontSize: 45.0,
+                    fontSize: 65.0,
                     fontWeight: FontWeight.w900,
-                    color: Colors.white,
+                    color: Colors.red[400],
                   ),
+                  duration: Duration(seconds: 20),
                 ),
               ],
             ),
-            SizedBox(
-              height: 48.0,
-            ),
-            RoundedButton(
-              buttonColor: Colors.lightBlueAccent,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 24.0, right: 24.0),
+            child: RoundedButton(
+              buttonColor: Colors.red[400],
               buttonText: 'Log In',
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
-            RoundedButton(
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 24.0, right: 24.0),
+            child: RoundedButton(
               buttonColor: Colors.blueAccent,
               buttonText: 'Register',
               onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
-            )
-          ],
-        ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              child: FlareActor(
+                'assets/animations/Taxi.flr',
+                alignment: Alignment.bottomCenter,
+                fit: BoxFit.contain,
+                animation: "driveLoop",
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
