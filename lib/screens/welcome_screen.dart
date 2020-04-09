@@ -44,11 +44,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 TyperAnimatedTextKit(
                   text: ['Noruuu'],
                   textStyle: TextStyle(
-                    fontSize: 65.0,
+                    fontSize: 120.0,
                     fontWeight: FontWeight.w900,
                     color: Colors.red[400],
                   ),
-                  duration: Duration(seconds: 20),
+                  duration: Duration(seconds: 5),
                 ),
               ],
             ),
