@@ -44,7 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 TyperAnimatedTextKit(
                   text: ['Noruuu'],
                   textStyle: TextStyle(
-                    fontSize: 120.0,
+                    fontSize: 105.0,
                     fontWeight: FontWeight.w900,
                     color: Colors.red[400],
                   ),
